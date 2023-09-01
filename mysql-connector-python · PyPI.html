@@ -1,0 +1,4604 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://pypi.org/project/mysql-connector-python/ -->
+<html lang="es" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo">
+
+    
+
+    <title>mysql-connector-python · PyPI</title>
+    <meta name="description" content="MySQL driver written in Python">
+
+    <link rel="stylesheet" href="./mysql-connector-python · PyPI_files/warehouse-ltr.1dcaa944.css">
+    <link rel="stylesheet" href="./mysql-connector-python · PyPI_files/fontawesome.b50b476c.css">
+    <link rel="stylesheet" href="./mysql-connector-python · PyPI_files/css">
+    <noscript>
+      <link rel="stylesheet" href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+
+    
+
+    <link rel="icon" href="https://pypi.org/static/images/favicon.35549fe8.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 actualizaciones más recientes" href="https://pypi.org/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 paquetes más recientes" href="https://pypi.org/rss/packages.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: las versiones más recientes de mysql-connector-python" href="https://pypi.org/rss/project/mysql-connector-python/releases.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/mysql-connector-python/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/mysql-connector-python/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title" content="mysql-connector-python">
+    <meta property="og:description" content="MySQL driver written in Python">
+    
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="https://pypi.org/opensearch.xml">
+
+    
+    <script type="text/javascript" async="" src="./mysql-connector-python · PyPI_files/analytics.js"></script><script type="text/javascript" async="" src="./mysql-connector-python · PyPI_files/js"></script><script type="text/javascript" async="" src="./mysql-connector-python · PyPI_files/js(1)"></script><script async="" data-ga-id="UA-55961911-1" data-ga4-id="G-RW7D75DF8V" src="./mysql-connector-python · PyPI_files/warehouse.f4488b19.js">
+    </script>
+    
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+};
+</script>
+<script async="" src="./mysql-connector-python · PyPI_files/tex-svg.js" integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII=" crossorigin="anonymous"></script>
+
+    <script async="" src="./mysql-connector-python · PyPI_files/js(2)"></script>
+    <script async="" src="./mysql-connector-python · PyPI_files/js(3)"></script>
+    <script defer="" src="./mysql-connector-python · PyPI_files/insights.js"></script>
+    <script async="" src="./mysql-connector-python · PyPI_files/ethicalads.min.js" integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug==" crossorigin="anonymous"></script>
+
+    
+  <style>[data-ea-publisher].loaded,[data-ea-type].loaded{font-size:14px;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-weight:normal;font-style:normal;leter-spacing:0px;vertical-align:baseline;line-height:1.3em}[data-ea-publisher].loaded a,[data-ea-type].loaded a{text-decoration:none}[data-ea-publisher].loaded .ea-pixel,[data-ea-type].loaded .ea-pixel{display:none}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{margin:1em 1em 0.5em 1em;padding:1em;background:rgba(0,0,0,0.03);color:#505050}[data-ea-publisher].loaded .ea-content a:link,[data-ea-type].loaded .ea-content a:link{color:#505050}[data-ea-publisher].loaded .ea-content a:visited,[data-ea-type].loaded .ea-content a:visited{color:#505050}[data-ea-publisher].loaded .ea-content a:hover,[data-ea-type].loaded .ea-content a:hover{color:#373737}[data-ea-publisher].loaded .ea-content a:active,[data-ea-type].loaded .ea-content a:active{color:#373737}[data-ea-publisher].loaded .ea-content a strong,[data-ea-publisher].loaded .ea-content a b,[data-ea-type].loaded .ea-content a strong,[data-ea-type].loaded .ea-content a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a:link,[data-ea-type].loaded .ea-callout a:link{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:visited,[data-ea-type].loaded .ea-callout a:visited{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:hover,[data-ea-type].loaded .ea-callout a:hover{color:#505050}[data-ea-publisher].loaded .ea-callout a:active,[data-ea-type].loaded .ea-callout a:active{color:#505050}[data-ea-publisher].loaded .ea-callout a strong,[data-ea-publisher].loaded .ea-callout a b,[data-ea-type].loaded .ea-callout a strong,[data-ea-type].loaded .ea-callout a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a,[data-ea-type].loaded .ea-callout a{font-size:0.8em}[data-ea-publisher].loaded.dark .ea-content,[data-ea-type].loaded.dark .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:link,[data-ea-type].loaded.dark .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:visited,[data-ea-type].loaded.dark .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:hover,[data-ea-type].loaded.dark .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a:active,[data-ea-type].loaded.dark .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a strong,[data-ea-publisher].loaded.dark .ea-content a b,[data-ea-type].loaded.dark .ea-content a strong,[data-ea-type].loaded.dark .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-callout a:link,[data-ea-type].loaded.dark .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:visited,[data-ea-type].loaded.dark .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:hover,[data-ea-type].loaded.dark .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a:active,[data-ea-type].loaded.dark .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a strong,[data-ea-publisher].loaded.dark .ea-callout a b,[data-ea-type].loaded.dark .ea-callout a strong,[data-ea-type].loaded.dark .ea-callout a b{color:#50baf9}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.adaptive .ea-content,[data-ea-type].loaded.adaptive .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:link,[data-ea-type].loaded.adaptive .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:visited,[data-ea-type].loaded.adaptive .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:hover,[data-ea-type].loaded.adaptive .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a:active,[data-ea-type].loaded.adaptive .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a strong,[data-ea-publisher].loaded.adaptive .ea-content a b,[data-ea-type].loaded.adaptive .ea-content a strong,[data-ea-type].loaded.adaptive .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-callout a:link,[data-ea-type].loaded.adaptive .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:visited,[data-ea-type].loaded.adaptive .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:hover,[data-ea-type].loaded.adaptive .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a:active,[data-ea-type].loaded.adaptive .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a strong,[data-ea-publisher].loaded.adaptive .ea-callout a b,[data-ea-type].loaded.adaptive .ea-callout a strong,[data-ea-type].loaded.adaptive .ea-callout a b{color:#50baf9}}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.raised .ea-content,[data-ea-type].loaded.raised .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.bordered .ea-content,[data-ea-type].loaded.bordered .ea-content{border:1px solid rgba(0,0,0,0.04);border-radius:3px;box-shadow:none}[data-ea-publisher].loaded.bordered.dark .ea-content,[data-ea-type].loaded.bordered.dark .ea-content{border:1px solid rgba(255,255,255,0.07)}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.bordered.adaptive .ea-content,[data-ea-type].loaded.bordered.adaptive .ea-content{border:1px solid rgba(255,255,255,0.07)}}[data-ea-publisher].loaded.flat .ea-content,[data-ea-type].loaded.flat .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-type="image"].loaded,[data-ea-publisher]:not([data-ea-type]).loaded,.ea-type-image{display:inline-block}[data-ea-type="image"].loaded .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content,.ea-type-image .ea-content{max-width:180px;overflow:auto;text-align:center}[data-ea-type="image"].loaded .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>a>img,.ea-type-image .ea-content>a>img{width:120px;height:90px;display:inline-block}[data-ea-type="image"].loaded .ea-content>.ea-text,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>.ea-text,.ea-type-image .ea-content>.ea-text{margin-top:1em;font-size:1em;text-align:center}[data-ea-type="image"].loaded .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded .ea-callout,.ea-type-image .ea-callout{max-width:180px;margin:0em 1em 1em 1em;padding-left:1em;padding-right:1em;font-style:italic;text-align:right}[data-ea-type="image"].loaded.horizontal .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content,.ea-type-image.horizontal .ea-content{max-width:320px}[data-ea-type="image"].loaded.horizontal .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content>a>img,.ea-type-image.horizontal .ea-content>a>img{float:left;margin-right:1em}[data-ea-type="image"].loaded.horizontal .ea-content .ea-text,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content .ea-text,.ea-type-image.horizontal .ea-content .ea-text{margin-top:0em;text-align:left;overflow:auto}[data-ea-type="image"].loaded.horizontal .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-callout,.ea-type-image.horizontal .ea-callout{max-width:320px;text-align:right}[data-ea-type="text"].loaded,.ea-type-text{font-size:14px}[data-ea-type="text"].loaded .ea-content,.ea-type-text .ea-content{text-align:left}[data-ea-type="text"].loaded .ea-callout,.ea-type-text .ea-callout{margin:0.5em 1em 1em 1em;padding-left:1em;padding-right:1em;text-align:right;font-style:italic}[data-ea-style="stickybox"].loaded .ea-type-image{z-index:1000;position:fixed;bottom:20px;right:20px}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{cursor:pointer;position:absolute;top:0.75em;right:0.75em;background-color:#fefefe;border:1px solid #088cdb;border-radius:50%;color:#088cdb;font-size:1em;text-align:center;height:1.5em;width:1.5em;line-height:1.5em}@media (max-width: 1300px){[data-ea-style="stickybox"].loaded .ea-type-image{position:static;bottom:0;right:0;margin:auto;text-align:center}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{display:none}}@media (min-width: 1301px){[data-ea-style="stickybox"].loaded .ea-type-image .ea-content{background:#dcdcdc}[data-ea-style="stickybox"].loaded.dark .ea-type-image .ea-content{background:#505050}}@media (min-width: 1301px) and (prefers-color-scheme: dark){[data-ea-style="stickybox"].loaded.adaptive .ea-type-image .ea-content{background:#505050}}
+</style><script src="./mysql-connector-python · PyPI_files/saved_resource" type="text/javascript" async=""></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-SVG-styles">
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></head>
+
+  <body data-controller="viewport-toggle" style="padding-top: 0px;">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="https://pypi.org/project/mysql-connector-python/#content" class="skip-to-content">Saltar al contenido principal</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-viewport-toggle-target="switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Cambiar a la versión para móviles
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Aviso</span>
+        </span>
+        <span class="notification-bar__message">Está utilizando un navegador no admitido. Actualícelo a una versión más reciente.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      <div class="notification-bar notification-bar--warning" role="status">
+        
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Aviso</span>
+        </span>
+        <span class="notification-bar__message">Algunas prestaciones pueden no funcionar sin JavaScript. Pruebe a activarlo si tiene problemas.</span>
+      </div>
+      </noscript>
+
+      
+        <div data-html-include="/_includes/notification-banners/"></div>
+      
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+
+
+
+
+
+</div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/"></div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="https://pypi.org/">
+                <img alt="PyPI" src="./mysql-connector-python · PyPI_files/logo-small.2a411bc6.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="https://pypi.org/search/" role="search">
+              <label for="search" class="sr-only">Buscar en PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Buscar proyectos" value="" autocomplete="off" autocapitalize="off" spellcheck="false" data-controller="search-focus" data-action="keydown@window-&gt;search-focus#focusSearchField" data-search-focus-target="searchField">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Buscar</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+    
+    <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Navegación principal">
+    <ul>
+      <li class="horizontal-menu__item"><a href="https://pypi.org/help/" class="horizontal-menu__link">Ayuda</a></li>
+      <li class="horizontal-menu__item"><a href="https://pypi.org/sponsors/" class="horizontal-menu__link">Patrocinadores</a></li>
+      <li class="horizontal-menu__item"><a href="https://pypi.org/account/login/" class="horizontal-menu__link">Acceder</a></li>
+      <li class="horizontal-menu__item"><a href="https://pypi.org/account/register/" class="horizontal-menu__link">Registrarse</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Navegación principal">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-label="Ver menú" data-dropdown-bound="true">
+      Menú
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content" aria-hidden="true" aria-label="Menú principal">
+      <li><a class="dropdown__link" href="https://pypi.org/help/">Ayuda</a></li>
+      <li><a class="dropdown__link" href="https://pypi.org/sponsors/">Patrocinadores</a></li>
+      <li><a class="dropdown__link" href="https://pypi.org/account/login/">Acceder</a></li>
+      <li><a class="dropdown__link" href="https://pypi.org/account/register/">Registrarse</a></li>
+    </ul>
+  </nav>
+</div>
+  </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="https://pypi.org/search/" role="search">
+        <label for="mobile-search" class="sr-only">Buscar en PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Buscar proyectos" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Buscar</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+
+
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        mysql-connector-python 8.1.0
+      </h1>
+
+      
+      <div data-controller="clipboard">
+        <p class="package-header__pip-instructions">
+          <span id="pip-command" data-clipboard-target="source">pip install mysql-connector-python</span>
+          <button type="button" class="copy-tooltip copy-tooltip-s" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+            <i class="fa fa-copy" aria-hidden="true"></i>
+            <span class="sr-only">Copiar instrucciones para PIP</span>
+          </button>
+        </p>
+      </div>
+      
+    </div>
+
+    <div class="package-header__right">
+    
+      
+      <a class="status-badge status-badge--good" href="https://pypi.org/project/mysql-connector-python/">
+        <span>Versión más reciente</span>
+      </a>
+      
+    
+      <p class="package-header__date">
+        Publicación: <time datetime="2023-07-18T05:46:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:46:45 (-04:00)" aria-label="2023-07-18 01:46:45 (-04:00)">18 jul 2023</time>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+<div data-html-include="/_includes/administer-project-include/mysql-connector-python"></div>
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">MySQL driver written in Python</p>
+    
+    <div data-html-include="/_includes/edit-project-button/mysql-connector-python"></div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs" data-project-tabs-content="description">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navegación</h3>
+          <nav aria-label="Navegación de mysql-connector-python">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" href="https://pypi.org/project/mysql-connector-python/#description" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" aria-selected="true" aria-label="Descripción del proyecto. La descripción se destacará.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Descripción de proyecto
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" href="https://pypi.org/project/mysql-connector-python/#history" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Histórico de versiones. El panel de histórico se destacará.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Histórico de versiones
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" href="https://pypi.org/project/mysql-connector-python/#files" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Archivos de descarga. Los archivos del proyecto se destacarán.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Archivos de descarga
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Enlaces del proyecto</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="http://dev.mysql.com/doc/connector-python/en/index.html" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="http://dev.mysql.com/downloads/connector/python/" rel="nofollow">
+        
+
+
+   
+
+
+<i class="fas fa-cloud-download-alt" aria-hidden="true"></i>Download
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Estadísticas</h3>
+  
+  <p>
+    Consulte estadísticas de este proyecto en <a href="https://libraries.io/pypi/mysql-connector-python" title="Enlace externo" target="_blank" rel="noopener">Libraries.io</a> o a través de <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">nuestro conjunto de datos público en Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Metainformación</h3>
+  
+  <p><strong>Licencia:</strong> GNU General Public License (GPL) (GNU GPLv2 (with FOSS License Exception))</p>
+  
+  
+    <p><strong>Autor:</strong> Oracle and/or its affiliates</p>
+  
+  
+  
+  <p class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <span class="sr-only">Etiquetas</span>
+    
+    <span class="package-keyword">
+      mysql,
+    </span>
+    
+    <span class="package-keyword">
+      db
+    </span>
+    
+  </p>
+  
+  
+  <p>
+    <strong>Requiere:</strong> Python &gt;=3.8
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  
+  
+    <h3 class="sidebar-section__title">Responsables</h3>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/chuck.bell/" aria-label="chuck.bell">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f37653335373631353339356436396636643531643630393231306561623730343f73697a653d3530" height="50" width="50" alt="Avatar de chuck.bell de gravatar.com" title="Avatar de chuck.bell de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            chuck.bell
+          </span>
+        </a>
+      </span>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/mysql_re_team/" aria-label="mysql_re_team">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f65646437653130633436316565376633663662346236633735616164383531303f73697a653d3530" height="50" width="50" alt="Avatar de mysql_re_team de gravatar.com" title="Avatar de mysql_re_team de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            mysql_re_team
+          </span>
+        </a>
+      </span>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/nmariz/" aria-label="nmariz">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f63373364333737633338336136383833316336393762346538383866643238313f73697a653d3530" height="50" width="50" alt="Avatar de nmariz de gravatar.com" title="Avatar de nmariz de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            nmariz
+          </span>
+        </a>
+      </span>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/prashanttekriwal/" aria-label="prashanttekriwal">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35393462633731333061393361343835623863633262656539353665656433333f73697a653d3530" height="50" width="50" alt="Avatar de prashanttekriwal de gravatar.com" title="Avatar de prashanttekriwal de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            prashanttekriwal
+          </span>
+        </a>
+      </span>
+    
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Clasificadores</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable">
+            5 - Production/Stable
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Environment</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Environment+%3A%3A+Other+Environment">
+            Other Environment
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+Education">
+            Education
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+Information+Technology">
+            Information Technology
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+System+Administrators">
+            System Administrators
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+GNU+General+Public+License+%28GPL%29">
+            OSI Approved :: GNU General Public License (GPL)
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Operating System</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Operating+System+%3A%3A+OS+Independent">
+            OS Independent
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+            Python :: 3.10
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+            Python :: 3.11
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Topic</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Database">
+            Database
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Software+Development">
+            Software Development
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Application+Frameworks">
+            Software Development :: Libraries :: Application Frameworks
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Python+Modules">
+            Software Development :: Libraries :: Python Modules
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+        
+        
+<div class="sidebar-section loaded" data-ea-publisher="psf" data-ea-type="psf" data-ea-keywords="pypi-sidebar"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://server.ethicalads.io/proxy/click/1704/39d270d1-f26a-4338-b56a-e64027927a54/" rel="nofollow noopener sponsored" target="_blank" class="ethical-image-link"><img src="./mysql-connector-python · PyPI_files/_Web-C1_Core_RGB_nR3VuF9.png" alt="Sponsored: Python Software Foundation"></a><div class="ethical-text">Capital One is a Maintaining sponsor of the Python Software Foundation.</div></div><div class="ethical-callout"><small><em><a href="https://www.python.org/psf/sponsorship/?ref=ethicalads-placement">PSF Sponsor</a><span> · </span><a href="https://www.ethicalads.io/sponsorship-platform/?ref=psf">Served ethically</a></em></small></div></div></div>
+
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navegación de mysql-connector-python">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" href="https://pypi.org/project/mysql-connector-python/#description" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" aria-selected="true" aria-label="Descripción del proyecto. La descripción se destacará.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Descripción de proyecto
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" href="https://pypi.org/project/mysql-connector-python/#data" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Detalles de proyecto. Los detalles del proyecto se destacarán.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Detalles de proyecto
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" href="https://pypi.org/project/mysql-connector-python/#history" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Histórico de versiones. El panel de histórico se destacará.">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Histórico de versiones
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" href="https://pypi.org/project/mysql-connector-python/#files" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Archivos de descarga. Los archivos del proyecto se destacarán.">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Archivos de descarga
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" tabindex="-1" style="display: block;">
+          <h2 class="page-title">Descripción de proyecto</h2>
+          
+          <div class="project-description">
+            <p>MySQL driver written in Python which does not depend on MySQL C client
+libraries and implements the DB API v2.0 specification (PEP-249).</p>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" tabindex="-1" style="display: none;">
+          <h2 class="page-title">Detalles de proyecto</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Enlaces del proyecto</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="http://dev.mysql.com/doc/connector-python/en/index.html" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="http://dev.mysql.com/downloads/connector/python/" rel="nofollow">
+        
+
+
+   
+
+
+<i class="fas fa-cloud-download-alt" aria-hidden="true"></i>Download
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Estadísticas</h3>
+  
+  <p>
+    Consulte estadísticas de este proyecto en <a href="https://libraries.io/pypi/mysql-connector-python" title="Enlace externo" target="_blank" rel="noopener">Libraries.io</a> o a través de <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">nuestro conjunto de datos público en Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Metainformación</h3>
+  
+  <p><strong>Licencia:</strong> GNU General Public License (GPL) (GNU GPLv2 (with FOSS License Exception))</p>
+  
+  
+    <p><strong>Autor:</strong> Oracle and/or its affiliates</p>
+  
+  
+  
+  <p class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <span class="sr-only">Etiquetas</span>
+    
+    <span class="package-keyword">
+      mysql,
+    </span>
+    
+    <span class="package-keyword">
+      db
+    </span>
+    
+  </p>
+  
+  
+  <p>
+    <strong>Requiere:</strong> Python &gt;=3.8
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  
+  
+    <h3 class="sidebar-section__title">Responsables</h3>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/chuck.bell/" aria-label="chuck.bell">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f37653335373631353339356436396636643531643630393231306561623730343f73697a653d3530" height="50" width="50" alt="Avatar de chuck.bell de gravatar.com" title="Avatar de chuck.bell de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            chuck.bell
+          </span>
+        </a>
+      </span>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/mysql_re_team/" aria-label="mysql_re_team">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f65646437653130633436316565376633663662346236633735616164383531303f73697a653d3530" height="50" width="50" alt="Avatar de mysql_re_team de gravatar.com" title="Avatar de mysql_re_team de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            mysql_re_team
+          </span>
+        </a>
+      </span>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/nmariz/" aria-label="nmariz">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f63373364333737633338336136383833316336393762346538383866643238313f73697a653d3530" height="50" width="50" alt="Avatar de nmariz de gravatar.com" title="Avatar de nmariz de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            nmariz
+          </span>
+        </a>
+      </span>
+    
+      
+      <span class="sidebar-section__maintainer">
+        <a href="https://pypi.org/user/prashanttekriwal/" aria-label="prashanttekriwal">
+          <span class="sidebar-section__user-gravatar">
+            <img src="./mysql-connector-python · PyPI_files/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35393462633731333061393361343835623863633262656539353665656433333f73697a653d3530" height="50" width="50" alt="Avatar de prashanttekriwal de gravatar.com" title="Avatar de prashanttekriwal de gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">
+            prashanttekriwal
+          </span>
+        </a>
+      </span>
+    
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Clasificadores</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable">
+            5 - Production/Stable
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Environment</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Environment+%3A%3A+Other+Environment">
+            Other Environment
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+Education">
+            Education
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+Information+Technology">
+            Information Technology
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Intended+Audience+%3A%3A+System+Administrators">
+            System Administrators
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+GNU+General+Public+License+%28GPL%29">
+            OSI Approved :: GNU General Public License (GPL)
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Operating System</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Operating+System+%3A%3A+OS+Independent">
+            OS Independent
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+            Python :: 3.10
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+            Python :: 3.11
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Topic</strong>
+      <ul>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Database">
+            Database
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Software+Development">
+            Software Development
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Application+Frameworks">
+            Software Development :: Libraries :: Application Frameworks
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://pypi.org/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Python+Modules">
+            Software Development :: Libraries :: Python Modules
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" tabindex="-1" style="display: none;">
+          <h2 class="page-title split-layout">
+            <span>Histórico de versiones</span>
+            <span class="reset-text margin-top">
+              <a href="https://pypi.org/help/#project-release-notifications">Notificaciones de versiones</a> |
+              <a href="https://pypi.org/rss/project/mysql-connector-python/releases.xml">Suministro RSS <i class="fa fa-rss" aria-hidden="true"></i></a>
+            </span>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest release--current">
+              <div class="release__meta">
+                
+                <span class="badge">Esta versión</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/blue-cube.572a5bfb.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.1.0/">
+                <p class="release__version">
+                  8.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-07-18T05:46:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:46:45 (-04:00)" aria-label="2023-07-18 01:46:45 (-04:00)">18 jul 2023</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.33/">
+                <p class="release__version">
+                  8.0.33
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-04-18T07:01:33+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-04-18 03:01:33 (-04:00)" aria-label="2023-04-18 03:01:33 (-04:00)">18 abr 2023</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.32/">
+                <p class="release__version">
+                  8.0.32
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-01-17T04:03:47+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-01-17 00:03:47 (-04:00)" aria-label="2023-01-17 00:03:47 (-04:00)">17 ene 2023</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.31/">
+                <p class="release__version">
+                  8.0.31
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-10-11T10:50:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2022-10-11 06:50:10 (-04:00)" aria-label="2022-10-11 06:50:10 (-04:00)">11 oct 2022</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.30/">
+                <p class="release__version">
+                  8.0.30
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-07-26T06:11:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2022-07-26 02:11:43 (-04:00)" aria-label="2022-07-26 02:11:43 (-04:00)">26 jul 2022</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.29/">
+                <p class="release__version">
+                  8.0.29
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-04-26T07:43:34+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2022-04-26 03:43:34 (-04:00)" aria-label="2022-04-26 03:43:34 (-04:00)">26 abr 2022</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.28/">
+                <p class="release__version">
+                  8.0.28
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-01-18T12:27:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2022-01-18 08:27:17 (-04:00)" aria-label="2022-01-18 08:27:17 (-04:00)">18 ene 2022</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.27/">
+                <p class="release__version">
+                  8.0.27
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-10-19T11:55:05+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2021-10-19 07:55:05 (-04:00)" aria-label="2021-10-19 07:55:05 (-04:00)">19 oct 2021</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.26/">
+                <p class="release__version">
+                  8.0.26
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-07-20T12:17:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2021-07-20 08:17:37 (-04:00)" aria-label="2021-07-20 08:17:37 (-04:00)">20 jul 2021</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.25/">
+                <p class="release__version">
+                  8.0.25
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-05-11T08:03:28+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2021-05-11 04:03:28 (-04:00)" aria-label="2021-05-11 04:03:28 (-04:00)">11 may 2021</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.24/">
+                <p class="release__version">
+                  8.0.24
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-04-20T06:11:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2021-04-20 02:11:10 (-04:00)" aria-label="2021-04-20 02:11:10 (-04:00)">20 abr 2021</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.23/">
+                <p class="release__version">
+                  8.0.23
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-01-18T10:40:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2021-01-18 06:40:40 (-04:00)" aria-label="2021-01-18 06:40:40 (-04:00)">18 ene 2021</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.22/">
+                <p class="release__version">
+                  8.0.22
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-10-19T07:34:52+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2020-10-19 03:34:52 (-04:00)" aria-label="2020-10-19 03:34:52 (-04:00)">19 oct 2020</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.21/">
+                <p class="release__version">
+                  8.0.21
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-07-13T03:58:33+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2020-07-12 23:58:33 (-04:00)" aria-label="2020-07-12 23:58:33 (-04:00)">12 jul 2020</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.20/">
+                <p class="release__version">
+                  8.0.20
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-05-04T10:54:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2020-05-04 06:54:01 (-04:00)" aria-label="2020-05-04 06:54:01 (-04:00)">4 may 2020</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.19/">
+                <p class="release__version">
+                  8.0.19
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-01-13T09:29:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2020-01-13 05:29:59 (-04:00)" aria-label="2020-01-13 05:29:59 (-04:00)">13 ene 2020</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.18/">
+                <p class="release__version">
+                  8.0.18
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-10-14T11:01:14+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2019-10-14 07:01:14 (-04:00)" aria-label="2019-10-14 07:01:14 (-04:00)">14 oct 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.17/">
+                <p class="release__version">
+                  8.0.17
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-07-22T08:35:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2019-07-22 04:35:50 (-04:00)" aria-label="2019-07-22 04:35:50 (-04:00)">22 jul 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.16/">
+                <p class="release__version">
+                  8.0.16
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-04-25T02:55:28+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2019-04-24 22:55:28 (-04:00)" aria-label="2019-04-24 22:55:28 (-04:00)">24 abr 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.15/">
+                <p class="release__version">
+                  8.0.15
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-02-01T15:34:13+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2019-02-01 11:34:13 (-04:00)" aria-label="2019-02-01 11:34:13 (-04:00)">1 feb 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.14/">
+                <p class="release__version">
+                  8.0.14
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-01-21T07:56:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2019-01-21 03:56:51 (-04:00)" aria-label="2019-01-21 03:56:51 (-04:00)">21 ene 2019</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.13/">
+                <p class="release__version">
+                  8.0.13
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-10-22T05:38:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2018-10-22 01:38:40 (-04:00)" aria-label="2018-10-22 01:38:40 (-04:00)">22 oct 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.12/">
+                <p class="release__version">
+                  8.0.12
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-07-27T15:45:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2018-07-27 11:45:37 (-04:00)" aria-label="2018-07-27 11:45:37 (-04:00)">27 jul 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.11/">
+                <p class="release__version">
+                  8.0.11
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-04-19T21:16:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2018-04-19 17:16:16 (-04:00)" aria-label="2018-04-19 17:16:16 (-04:00)">19 abr 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.6/">
+                <p class="release__version">
+                  8.0.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-02-01T19:17:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2018-02-01 15:17:23 (-04:00)" aria-label="2018-02-01 15:17:23 (-04:00)">1 feb 2018</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/8.0.5/">
+                <p class="release__version">
+                  8.0.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-11-20T14:12:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2017-11-20 10:12:17 (-04:00)" aria-label="2017-11-20 10:12:17 (-04:00)">20 nov 2017</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/2.0.4/">
+                <p class="release__version">
+                  2.0.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-06-08T09:38:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2015-06-08 05:08:06 (-04:30)" aria-label="2015-06-08 05:08:06 (-04:30)">8 jun 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/2.0.3/">
+                <p class="release__version">
+                  2.0.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-02-04T08:06:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2015-02-04 03:36:17 (-04:30)" aria-label="2015-02-04 03:36:17 (-04:30)">4 feb 2015</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/2.0.2/">
+                <p class="release__version">
+                  2.0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-11-05T14:34:09+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2014-11-05 10:04:09 (-04:30)" aria-label="2014-11-05 10:04:09 (-04:30)">5 nov 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/2.0.1/">
+                <p class="release__version">
+                  2.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-09-30T08:52:34+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2014-09-30 04:22:34 (-04:30)" aria-label="2014-09-30 04:22:34 (-04:30)">30 sept 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.2.3/">
+                <p class="release__version">
+                  1.2.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-09-01T13:27:12+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2014-09-01 08:57:12 (-04:30)" aria-label="2014-09-01 08:57:12 (-04:30)">1 sept 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.2.2/">
+                <p class="release__version">
+                  1.2.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-06-03T11:58:25+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2014-06-03 07:28:25 (-04:30)" aria-label="2014-06-03 07:28:25 (-04:30)">3 jun 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.1.6/">
+                <p class="release__version">
+                  1.1.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-02-21T11:29:33+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2014-02-21 06:59:33 (-04:30)" aria-label="2014-02-21 06:59:33 (-04:30)">21 feb 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.1.5/">
+                <p class="release__version">
+                  1.1.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-02-05T08:57:32+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2014-02-05 04:27:32 (-04:30)" aria-label="2014-02-05 04:27:32 (-04:30)">5 feb 2014</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.1.4/">
+                <p class="release__version">
+                  1.1.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-12-21T08:02:09+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2013-12-21 03:32:09 (-04:30)" aria-label="2013-12-21 03:32:09 (-04:30)">21 dic 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.12/">
+                <p class="release__version">
+                  1.0.12
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-08-23T05:11:58+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2013-08-23 00:41:58 (-04:30)" aria-label="2013-08-23 00:41:58 (-04:30)">23 ago 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.10/">
+                <p class="release__version">
+                  1.0.10
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-05-22T13:09:22+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2013-05-22 08:39:22 (-04:30)" aria-label="2013-05-22 08:39:22 (-04:30)">22 may 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.9/">
+                <p class="release__version">
+                  1.0.9
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-03-04T06:16:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2013-03-04 01:46:53 (-04:30)" aria-label="2013-03-04 01:46:53 (-04:30)">4 mar 2013</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.7/">
+                <p class="release__version">
+                  1.0.7
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-10-29T09:46:28+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2012-10-29 05:16:28 (-04:30)" aria-label="2012-10-29 05:16:28 (-04:30)">29 oct 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.6b2/">
+                <p class="release__version">
+                  1.0.6b2
+                  
+                  <span class="badge badge--warning">
+                    prelanzamiento
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-09-08T13:24:03+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2012-09-08 08:54:03 (-04:30)" aria-label="2012-09-08 08:54:03 (-04:30)">8 sept 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.5/">
+                <p class="release__version">
+                  1.0.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-08-08T09:27:26+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2012-08-08 04:57:26 (-04:30)" aria-label="2012-08-08 04:57:26 (-04:30)">8 ago 2012</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="https://pypi.org/project/mysql-connector-python/1.0.5b1/">
+                <p class="release__version">
+                  1.0.5b1
+                  
+                  <span class="badge badge--warning">
+                    prelanzamiento
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-08-08T14:18:18+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2012-08-08 09:48:18 (-04:30)" aria-label="2012-08-08 09:48:18 (-04:30)">8 ago 2012</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" tabindex="-1" style="display: none;">
+            <h2 class="page-title">Archivos de descarga</h2>
+            <p>Descargue el archivo adecuado para su plataforma. Si no sabe cuál elegir, consulte información sobre <a href="https://packaging.python.org/installing/" title="Enlace externo" target="_blank" rel="noopener">cómo instalar paquetes</a>.</p>
+            <h3>
+              Source Distribution
+            </h3>
+
+            
+              
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/0b/1d/bf6259839db2d1b1c5bc2ebdd4f335f1e2d10a21f8cd5d849ba904766d7f/mysql-connector-python-8.1.0.tar.gz">
+          mysql-connector-python-8.1.0.tar.gz
+        </a>
+        (457.0 kB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-7f516bc3-7526-4748-9ff9-fea5d0f6438a">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:48:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:48:30 (-04:00)" aria-label="2023-07-18 01:48:30 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>source</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+
+            
+            <h3>
+              Built Distributions
+            </h3>
+
+            
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/99/72/9bcbc7d6fe122fcbb4f948fd79c18387e84c4df8762aa55eb230acf1193b/mysql_connector_python-8.1.0-py2.py3-none-any.whl">
+          mysql_connector_python-8.1.0-py2.py3-none-any.whl
+        </a>
+        (581.1 kB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-b6849821-fdbd-43b0-a326-6fb89069d3ab">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:48:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:48:27 (-04:00)" aria-label="2023-07-18 01:48:27 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>py2</code>
+          
+          <code>py3</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d3/b8/6798a0f91e595c0704a94c1e32a00ca930f77cb8f0f96c7e4dad4f9db1fe/mysql_connector_python-8.1.0-cp311-cp311-win_amd64.whl">
+          mysql_connector_python-8.1.0-cp311-cp311-win_amd64.whl
+        </a>
+        (10.8 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-107a8d59-a7f8-49e4-aa92-3bab03dc26b5">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:29+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:29 (-04:00)" aria-label="2023-07-18 01:47:29 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/55/8e/1270601b42d40c4fb0191fd9043430889510bdbc711c482b12e6f66099e2/mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_x86_64.whl">
+          mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_x86_64.whl
+        </a>
+        (27.5 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-958efc61-1ccf-4637-a60f-a8bb47681711">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:24+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:24 (-04:00)" aria-label="2023-07-18 01:47:24 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/db/eb/14b88a6574e709ea293cb91017c844bf375a9d300a63f54470a366561344/mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_aarch64.whl">
+          mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_aarch64.whl
+        </a>
+        (27.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-130dd07f-4a2e-4e69-bbb3-ab20f26e4fb5">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:17 (-04:00)" aria-label="2023-07-18 01:47:17 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/b8/b2/28df4c7f5d25224352eb2c54a1eb7c75ddb5d146c27bf40c485e970119db/mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_x86_64.whl">
+          mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_x86_64.whl
+        </a>
+        (10.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-6fa0b490-cfc2-4c54-be23-65562180eb0c">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:13+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:13 (-04:00)" aria-label="2023-07-18 01:47:13 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/df/62/ac79412bcbeb08d943f06b85324fde5f8bf364cece22ba4d4cf3c053052e/mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_arm64.whl">
+          mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_arm64.whl
+        </a>
+        (9.3 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-ab04614a-0485-4495-a53d-e481c43d13fa">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:09+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:09 (-04:00)" aria-label="2023-07-18 01:47:09 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/9d/1b/a7b17532d6c7972e9173d9cc6fad5f94b949bcaaafa744f4e68a255ebd37/mysql_connector_python-8.1.0-cp310-cp310-win_amd64.whl">
+          mysql_connector_python-8.1.0-cp310-cp310-win_amd64.whl
+        </a>
+        (10.9 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-99143a17-669f-4c30-961d-6dc83f0204c4">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:04 (-04:00)" aria-label="2023-07-18 01:47:04 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/99/c8/3606ded738aab9c3df709afd7655f71a64c836641640e44fb76d0e730cba/mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_x86_64.whl">
+          mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_x86_64.whl
+        </a>
+        (27.5 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-123fe2c3-3d0d-4456-8bbf-1eacf5883123">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:00 (-04:00)" aria-label="2023-07-18 01:47:00 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/43/47/1cb0517647d19b7690820f9cfda604f21594824f56d5a82cfd7dd5fb33b2/mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_aarch64.whl">
+          mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_aarch64.whl
+        </a>
+        (27.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-3e6ad5e9-e8c6-4bbb-a451-1bb06210cad0">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:46:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:46:54 (-04:00)" aria-label="2023-07-18 01:46:54 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d3/61/c02a132b8aef199902f8078c346317abaee946ecaca0f528af9790a93ca2/mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_x86_64.whl">
+          mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_x86_64.whl
+        </a>
+        (10.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-22abe13a-3096-4f16-b0fe-f1ba7059f53b">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:46:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:46:50 (-04:00)" aria-label="2023-07-18 01:46:50 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/7d/4b/5fed4ba4a5f20a43bc3bbe33376d1a0642148a1d96b7dcb41394b405d4e7/mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_arm64.whl">
+          mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_arm64.whl
+        </a>
+        (9.3 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-6ceebd6d-dd35-46c7-bb0e-65d735da206c">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:46:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:46:45 (-04:00)" aria-label="2023-07-18 01:46:45 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/92/56/73fb0cef5c38e9b777492a3a6f899ff0c3a253fb254445ad35bb636cfc0d/mysql_connector_python-8.1.0-cp39-cp39-win_amd64.whl">
+          mysql_connector_python-8.1.0-cp39-cp39-win_amd64.whl
+        </a>
+        (10.8 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-15b4b169-1062-4ed2-9a21-ee1f1adcda97">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:48:24+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:48:24 (-04:00)" aria-label="2023-07-18 01:48:24 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/c6/a9/a511489be8a43eb11d837ee5129316ddf016f56a4b748ebab04ff8a2e637/mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_x86_64.whl">
+          mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_x86_64.whl
+        </a>
+        (27.5 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-e3b36d25-ecb3-4020-bcab-9bcf8623490f">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:48:19+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:48:19 (-04:00)" aria-label="2023-07-18 01:48:19 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/c6/0f/2e575c5b020c190141453b29b6cbdd5293788ce08b9d72a2085c2eeb2d91/mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_aarch64.whl">
+          mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_aarch64.whl
+        </a>
+        (27.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-570497a8-d217-4b6e-9677-c3818a35cf4e">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:48:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:48:10 (-04:00)" aria-label="2023-07-18 01:48:10 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e6/23/42a1f898dff177b211ca7dbbfb37b171bd5b493f93177d4140b9c542acc8/mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_x86_64.whl">
+          mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_x86_64.whl
+        </a>
+        (10.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-94f8cff8-9de7-4312-9e5b-f74b5e01c11c">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:48:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:48:02 (-04:00)" aria-label="2023-07-18 01:48:02 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/59/25/e747d73424c3fe3e74aa7934ab5942e32d1047fcf11eaa7b6e1c07c5762d/mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_arm64.whl">
+          mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_arm64.whl
+        </a>
+        (9.3 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-da82b8e5-2526-40f9-bd6b-009e8ba347fa">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:57+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:57 (-04:00)" aria-label="2023-07-18 01:47:57 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/24/02/a5b6271da75cd7f67d9ec834cd79c8d65c1329e1eddfb707c56ded963d3d/mysql_connector_python-8.1.0-cp38-cp38-win_amd64.whl">
+          mysql_connector_python-8.1.0-cp38-cp38-win_amd64.whl
+        </a>
+        (10.8 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-7bf5d4fc-94c7-41c1-9aa5-3460e945aba5">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:53 (-04:00)" aria-label="2023-07-18 01:47:53 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/f1/15/e4d78b4bc6feae63d35e3b8438f03a15ea93ce3f7a58125f53103d10afc1/mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_x86_64.whl">
+          mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_x86_64.whl
+        </a>
+        (27.5 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-ac593434-b725-4ee3-a382-eea2fd62c1d2">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:48+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:48 (-04:00)" aria-label="2023-07-18 01:47:48 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/90/2f/bba997844ddb7a3f68aaeb3f941146393f97efaff64e7cdb3b5b603df3f8/mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_aarch64.whl">
+          mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_aarch64.whl
+        </a>
+        (27.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-187a5b69-ac29-4309-bff9-2bea4f7dab80">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:40 (-04:00)" aria-label="2023-07-18 01:47:40 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/24/e0/b67297832f501cdb20812f9dec2ceb2b83d024b7916b766ce73585b7b5b5/mysql_connector_python-8.1.0-cp38-cp38-macosx_12_0_x86_64.whl">
+          mysql_connector_python-8.1.0-cp38-cp38-macosx_12_0_x86_64.whl
+        </a>
+        (10.0 MB
+        <a href="https://pypi.org/project/mysql-connector-python/#copy-hash-modal-cf34cdf5-699c-4336-aa36-2a0b10056fc2">ver hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-07-18T05:47:34+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false" title="2023-07-18 01:47:34 (-04:00)" aria-label="2023-07-18 01:47:34 (-04:00)">18 jul 2023</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+          </div>
+
+          
+          <div id="copy-hash-modal-7f516bc3-7526-4748-9ff9-fea5d0f6438a" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql-connector-python-8.1.0.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql-connector-python-8.1.0.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">78a43eeb2b845986dc769ab611e3c480991c8037c94aee67ee6842d1f7e961a9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">d829c4fe8ae02c4ad289336f64121da7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">0b1dbf6259839db2d1b1c5bc2ebdd4f335f1e2d10a21f8cd5d849ba904766d7f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-b6849821-fdbd-43b0-a326-6fb89069d3ab" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-py2.py3-none-any.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-py2.py3-none-any.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">7abe27b88ae1354433713fc289ed663cc04f7b75ea818a2b18067c3a736b0975</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">8883fd2cea21606b49cf69dcc6ff3527</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">99729bcbc7d6fe122fcbb4f948fd79c18387e84c4df8762aa55eb230acf1193b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-107a8d59-a7f8-49e4-aa92-3bab03dc26b5" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp311-cp311-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp311-cp311-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">f36a1a308d0d0d6202fea2e51741b5265f60206be331cfbb32f2f5bf62a20359</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">76bc0ba96b4e7003782203d42bc62809</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">d3b86798a0f91e595c0704a94c1e32a00ca930f77cb8f0f96c7e4dad4f9db1fe</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-958efc61-1ccf-4637-a60f-a8bb47681711" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">89151683654748f4de59cd4cf04102b6180976923f1db9921b87cff2c2da7b1d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">28e84ae4cc42785308632fe9e27c1d86</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">558e1270601b42d40c4fb0191fd9043430889510bdbc711c482b12e6f66099e2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-130dd07f-4a2e-4e69-bbb3-ab20f26e4fb5" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp311-cp311-manylinux_2_17_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">7f1cbc06411115c318af775291386ed1494302e05b5c45da73f01593c0827bc1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">54a5429949742e6238497070f6d66446</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">dbeb14b88a6574e709ea293cb91017c844bf375a9d300a63f54470a366561344</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-6fa0b490-cfc2-4c54-be23-65562180eb0c" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">64f4d7f7c60e2fe5a01d9e7915634d05a350bd866332ea4eab281b29db190e2b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">1d7d741c0ccc5d0a92784a2a5a00ac04</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">b8b228df4c7f5d25224352eb2c54a1eb7c75ddb5d146c27bf40c485e970119db</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-ab04614a-0485-4495-a53d-e481c43d13fa" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp311-cp311-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">1d292d8ee08a3e0103f3e9aba81f292c12c244c1d5345168375bf6842b2b3e9b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">3af499c692679ec9a2d7193fd2744505</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">df62ac79412bcbeb08d943f06b85324fde5f8bf364cece22ba4d4cf3c053052e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-99143a17-669f-4c30-961d-6dc83f0204c4" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp310-cp310-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp310-cp310-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">dd0005e9b7e54c700745416ecf26435c69687d5234eef9ff11cf85a7d76945e2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">66582c0263b66a09e1f58c5e2dd3e282</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">9d1ba7b17532d6c7972e9173d9cc6fad5f94b949bcaaafa744f4e68a255ebd37</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-123fe2c3-3d0d-4456-8bbf-1eacf5883123" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">556f83cfc3e1f3e3db0080bb19ca50650815551ef7e10518053fe2ba76d2e59e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">c3e14d7cd0c037497b53f9aace2e586c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">99c83606ded738aab9c3df709afd7655f71a64c836641640e44fb76d0e730cba</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-3e6ad5e9-e8c6-4bbb-a451-1bb06210cad0" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp310-cp310-manylinux_2_17_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">5f1cdf9d3ed2f3c70a91c4b94d3ab3b2890c477a61b4085bb89d2275c50e1e3d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">11bbda854f4d45f84758d9c6349e432a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">43471cb0517647d19b7690820f9cfda604f21594824f56d5a82cfd7dd5fb33b2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-22abe13a-3096-4f16-b0fe-f1ba7059f53b" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">8062c11619bc48baf9ada3f85d85832aec5e57359eb11ed9e7d75ddcce81721a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">34a784ed998b759a44237662dbd149d2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">d361c02a132b8aef199902f8078c346317abaee946ecaca0f528af9790a93ca2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-6ceebd6d-dd35-46c7-bb0e-65d735da206c" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp310-cp310-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">4f58e1d41b3ba04281099884421c3a63589204b2cf40e473c5dbebbc26971017</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">c8b4aea79393a9e853a1b9692641b530</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">7d4b5fed4ba4a5f20a43bc3bbe33376d1a0642148a1d96b7dcb41394b405d4e7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-15b4b169-1062-4ed2-9a21-ee1f1adcda97" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp39-cp39-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp39-cp39-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">40e3b5d60dbc5446ccd1901eb3db4c9b1ad07a490f4e0fc96e7ac53a6fe9b7bc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">9d38bc776ad5843b0a32591ad147cd81</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">925673fb0cef5c38e9b777492a3a6f899ff0c3a253fb254445ad35bb636cfc0d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-e3b36d25-ecb3-4020-bcab-9bcf8623490f" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">9cc256eaf55a7dd706ae514bebb863d3e426bd12686b88e284bdad6c37bf6dde</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">f2396e1005bb851da3a92a988fd76372</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">c6a9a511489be8a43eb11d837ee5129316ddf016f56a4b748ebab04ff8a2e637</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-570497a8-d217-4b6e-9677-c3818a35cf4e" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp39-cp39-manylinux_2_17_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">76432810ee58abda81e0a34666f86aba69a7ded58f164a1d19835dba70b1451b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">1077be13a986f206287349895d81988b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">c60f2e575c5b020c190141453b29b6cbdd5293788ce08b9d72a2085c2eeb2d91</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-94f8cff8-9de7-4312-9e5b-f74b5e01c11c" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">90adf52cdb25a7adc18da0cc6c5454709598af0e87343e39ab2c11d7dc5aaf34</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">3034e446e487df66cc0f436a6e8ef39c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">e62342a1f898dff177b211ca7dbbfb37b171bd5b493f93177d4140b9c542acc8</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-da82b8e5-2526-40f9-bd6b-009e8ba347fa" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp39-cp39-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">816b46c9dc250a0e59d11a902e187be190dae992a2b802512b888930db380487</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">9710a284dab4bf45a7757ad90187dc46</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">5925e747d73424c3fe3e74aa7934ab5942e32d1047fcf11eaa7b6e1c07c5762d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-7bf5d4fc-94c7-41c1-9aa5-3460e945aba5" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp38-cp38-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp38-cp38-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">22259479bdba53e0eb64325d5d97d7ecae35e729a8b39822c16729476ba2cd92</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">93b51426e81a0ff7d52a0e2944fe36d5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">2402a5b6271da75cd7f67d9ec834cd79c8d65c1329e1eddfb707c56ded963d3d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-ac593434-b725-4ee3-a382-eea2fd62c1d2" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">f2ac6d43fc5a01e574fcc2a6b732cc2374e6ce576ee039cc2051f18d2daafd6d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">b3935c95605bcd8b3f4ae6dedd3bbb88</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">f115e4d78b4bc6feae63d35e3b8438f03a15ea93ce3f7a58125f53103d10afc1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-187a5b69-ac29-4309-bff9-2bea4f7dab80" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp38-cp38-manylinux_2_17_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">e3a2c2b398af1c5f0cbc1b1935f98bb5a7da4f178b2e73f0851872fbb37e66cc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">f9222278ed65569ca7b934e09f96abfb</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">902fbba997844ddb7a3f68aaeb3f941146393f97efaff64e7cdb3b5b603df3f8</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-cf34cdf5-699c-4336-aa36-2a0b10056fc2" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="https://pypi.org/project/mysql-connector-python/#modal-close" title="Cerrar" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Cerrar</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="Enlace externo" target="_blank" rel="noopener">Resúmenes</a> de mysql_connector_python-8.1.0-cp38-cp38-macosx_12_0_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Resúmenes de mysql_connector_python-8.1.0-cp38-cp38-macosx_12_0_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algoritmo</th>
+            <th scope="col">Salida de resumen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-controller="clipboard">
+            <th scope="row">SHA256</th>
+            <td><code data-clipboard-target="source">f8160777788c7e561f9d7f93eff45776031c83aa2f02a0d8c138d8f9c9bd088e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">MD5</th>
+            <td><code data-clipboard-target="source">165d404de1764e2333d40ad3702721f9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+          <tr data-controller="clipboard">
+            <th scope="row">BLAKE2b-256</th>
+            <td><code data-clipboard-target="source">24e0b67297832f501cdb20812f9dec2ceb2b83d024b7916b766ce73585b7b5b5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-action="clipboard#copy" data-clipboard-target="tooltip" data-clipboard-tooltip-value="Copiar en el portapapeles">
+                Copiar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="https://pypi.org/project/mysql-connector-python/#modal-close" class="button button--primary modal__action">Cerrar</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="./mysql-connector-python · PyPI_files/white-cube.2351a86c.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Ayuda</h2>
+          <nav aria-label="Navegación por la ayuda">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="Enlace externo" target="_blank" rel="noopener">Instalación de paquetes</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="Enlace externo" target="_blank" rel="noopener">Carga de paquetes</a></li>
+              <li><a href="https://packaging.python.org/" title="Enlace externo" target="_blank" rel="noopener">Manual de uso</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="Enlace externo" target="_blank" rel="noopener">Retención de nombres de proyecto</a></li>
+              <li><a href="https://pypi.org/help/">Preguntas frecuentes</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Acerca de PyPI</h2>
+          <nav aria-label="Navegación por Acerca de PyPI">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="Enlace externo" target="_blank" rel="noopener">PyPI en Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="Enlace externo" target="_blank" rel="noopener">Cuadro de mando de infraestructura</a></li>
+              <li><a href="https://pypi.org/stats/">Estadísticas</a></li>
+              <li><a href="https://pypi.org/trademarks/">Logos y trademarks</a></li>
+              <li><a href="https://pypi.org/sponsors/">Nuestros patrocinadores</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contribuir con PyPI</h2>
+          <nav aria-label="Navegación por Cómo contribuir">
+            <ul>
+              <li><a href="https://pypi.org/help/#feedback">Defectos y comentarios</a></li>
+              <li><a href="https://github.com/pypi/warehouse" title="Enlace externo" target="_blank" rel="noopener">Contribuir en GitHub</a></li>
+              <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/" title="Enlace externo" target="_blank" rel="noopener">Traducir PyPI</a></li>
+              <li><a href="https://pypi.org/sponsors/">Patrocinar a PyPI</a></li>
+              <li><a href="https://github.com/pypi/warehouse/graphs/contributors" title="Enlace externo" target="_blank" rel="noopener">Créditos de desarrollo</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Uso de PyPI</h2>
+          <nav aria-label="Navegación por Uso de PyPI">
+            <ul>
+              <li><a href="https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md" title="Enlace externo" target="_blank" rel="noopener">Código de conducta</a></li>
+              <li><a href="https://pypi.org/security/">Informar de un problema de seguridad</a></li>
+              <li><a href="https://www.python.org/privacy/" title="Enlace externo" target="_blank" rel="noopener">Normativa de privacidad</a></li>
+              <li><a href="https://pypi.org/policy/terms-of-use/">Términos de uso</a></li>
+              <li><a href="https://pypi.org/policy/acceptable-use-policy/">Políticas de Uso Aceptable</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Estado:<a href="https://status.python.org/" title="Enlace externo" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">Service Under Maintenance</span></a>
+        </p>
+        
+        <p>
+          Desarrollado y mantenido por la comunidad de Python para la comunidad de Python.
+          <br>
+          <a href="https://donate.pypi.org/">¡Done hoy mismo!</a>
+        </p>
+        <p>
+          
+"PyPI", "Python Package Index", y los logos de los bloques son <a href="https://pypi.org/trademarks/">marcas</a> registradas de <a href="https://python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+<br>
+        </p>
+        <p>
+          © 2023 <a href="https://www.python.org/psf-landing/" title="Enlace externo" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="https://pypi.org/sitemap/">Mapa del sitio</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop" data-viewport-toggle-target="switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Cambiar a la versión de escritorio
+        </button>
+      </div>
+    </footer>
+
+
+    <div class="language-switcher">
+      <form action="https://pypi.org/locale/">
+        <ul>
+          
+          <li>
+            <button name="locale_id" value="en" type="submit">
+              English
+            </button>
+          </li>
+          
+          <li>
+            <button class="language-switcher__selected" name="locale_id" value="es" type="submit">
+              español
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="fr" type="submit">
+              français
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="ja" type="submit">
+              日本語
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="pt_BR" type="submit">
+              português (Brasil)
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="uk" type="submit">
+              українська
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="el" type="submit">
+              Ελληνικά
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="de" type="submit">
+              Deutsch
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="zh_Hans" type="submit">
+              中文 (简体)
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="zh_Hant" type="submit">
+              中文 (繁體)
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="ru" type="submit">
+              русский
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="he" type="submit">
+              עברית
+            </button>
+          </li>
+          
+          <li>
+            <button name="locale_id" value="eo" type="submit">
+              esperanto
+            </button>
+          </li>
+          
+        </ul>
+      </form>
+    </div>
+
+
+    <div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  <div class="sponsors__divider"></div>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt="AWS" loading="lazy">
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+          
+          
+            Cloud computing and Security Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt="Datadog" loading="lazy">
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt="Fastly" loading="lazy">
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+          
+          
+            CDN
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://careers.google.com/">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt="Google" loading="lazy">
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+          
+          
+            Download Analytics
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#microsoft">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6d6963726f736f66742d77686974652d6c6f676f2d5a443172685444462e706e67" alt="Microsoft" loading="lazy">
+          <span class="sponsors__name">Microsoft</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt="Pingdom" loading="lazy">
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67" alt="Sentry" loading="lazy">
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+          
+          
+            Error logging
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io/">
+          <img class="sponsors__image" src="./mysql-connector-python · PyPI_files/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt="StatusPage" loading="lazy">
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+          
+          
+            Status page
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</div>
+
+    
+  
+
+</body></html>
